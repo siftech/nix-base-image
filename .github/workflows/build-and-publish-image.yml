@@ -1,0 +1,12 @@
+name: Build and Publish Image
+on:
+  push:
+    branches: ["trunk"]
+  pull_request:
+    branches: ["trunk"]
+jobs:
+  builds:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - run: ./bootstrap.sh
